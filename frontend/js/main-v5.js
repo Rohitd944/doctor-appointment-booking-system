@@ -14,12 +14,16 @@
 // ====================================
 
 const CONFIG = {
-  API_URL: 'http://localhost:5001/api',
-  STAFF_PASSWORD: '9096rohi',
-  DEBUG: true, // Development mode - console logs enabled
-  REFRESH_INTERVAL: 30000, // Auto-refresh appointments every 30s
-  TOKEN_KEY: 'hospital_token',
-  USER_KEY: 'hospital_user'
+   API_URL:
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+      ? "http://localhost:5001/api"
+      : "https://doctor-appointment-qoxg.onrender.com/api",
+  STAFF_PASSWORD: "9096rohi",
+  DEBUG: true,
+  REFRESH_INTERVAL: 30000,
+  TOKEN_KEY: "hospital_token",
+  USER_KEY: "hospital_user",
 };
 
 const STATE = {
