@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard - ClinicName</title>
+    <link rel="stylesheet" href="css/style-v5.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">ClinicName</a>
+            <nav>
+                <a href="index.html"><i data-feather="home"></i>Home</a>
+                <a href="doctors.html"><i data-feather="users"></i>Our Doctors</a>
+                <a href="dashboard.html" class="active"><i data-feather="layout"></i>My Dashboard</a>
+                <a href="#" id="logout-link"><i data-feather="log-out"></i>Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 id="welcome-message">Welcome!</h1>
+        
+        <div class="dashboard-grid">
+            <section class="card booking-card">
+                <h2><i data-feather="calendar"></i> Book an Appointment</h2>
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="doctor-select">Doctor</label>
+                        <select id="doctor-select" required>
+                            <option value="">Loading doctors...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date-input">Date</label>
+                        <input type="date" id="date-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Available Time Slots</label>
+                        <div id="time-slot-grid" class="time-slot-container">
+                            <div class="slot-placeholder">Please select a doctor and date.</div>
+                        </div>
+                        <input type="hidden" id="selected-time-slot" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full"><i data-feather="check-circle"></i> Book Now</button>
+                </form>
+            </section>
+
+            <div class="dashboard-col-2">
+                <section class="card">
+                    <h2><i data-feather="list"></i> My Appointments</h2>
+                    <div class="list-container" id="appointments-list">
+                        <div class="loader"></div>
+                    </div>
+                </section>
+                
+                <section class="card">
+                    <h2><i data-feather="file-text"></i> My Medical History (Read-Only)</h2>
+                    <div class="list-container" id="medical-history-list">
+                        <div class="loader"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="global-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-icon"></div>
+            <h2 id="modal-title">Modal Title</h2>
+            <p id="modal-message">Modal message goes here.</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
+                <button class="btn btn-primary" id="modal-confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 ClinicName. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/main-v5.js"></script>
+</body>
+</html>

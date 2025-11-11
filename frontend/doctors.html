@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors - ClinicName</title>
+    <link rel="stylesheet" href="css/style-v5.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">ClinicName</a>
+            <nav>
+                <a href="index.html"><i data-feather="home"></i>Home</a>
+                <a href="doctors.html" class="active"><i data-feather="users"></i>Our Doctors</a>
+                <a href="dashboard.html" id="dashboard-link" style="display:none;"><i data-feather="layout"></i>Dashboard</a>
+                <a href="login.html" id="login-link"><i data-feather="log-in"></i>Login</a>
+                <a href="register.html" id="register-link"><i data-feather="edit-3"></i>Register</a>
+                <a href="#" id="logout-link" style="display:none;"><i data-feather="log-out"></i>Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h1>Meet Our Doctors</h1>
+            <p>Our team of dedicated professionals from Miraj and beyond.</p>
+        </div>
+        
+        <div id="doctor-list-container" class="doctor-grid">
+            <div class="loader"></div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 ClinicName. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/main-v5.js"></script>
+</body>
+</html>

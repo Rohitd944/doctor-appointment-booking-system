@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard - ClinicName</title>
+    <link rel="stylesheet" href="css/style-v5.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Doctor Portal</a>
+            <nav>
+                <a href="index.html"><i data-feather="home"></i>Home</a>
+                <a href="doctor-dashboard.html" class="active"><i data-feather="layout"></i>Dashboard</a>
+                <a href="#" id="logout-link"><i data-feather="log-out"></i>Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 id="welcome-message">Welcome, Doctor!</h1>
+        
+        <section class="card">
+            <h2><i data-feather="calendar"></i> Your Upcoming Appointments</h2>
+            <div class="list-container" id="doctor-appointments-list">
+                <div class="loader"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="history-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content large">
+            <button class="modal-close" id="history-modal-close-btn">&times;</button>
+            <h2 id="modal-patient-name">Patient Medical History</h2>
+            
+            <div class="modal-body">
+                <div class="card history-form-card">
+                    <h3><i data-feather="plus-circle"></i> Add New Record</h3>
+                    <form id="add-history-form">
+                        <input type="hidden" id="history-patient-id">
+                        <div class="form-group">
+                            <label for="diagnosis">Diagnosis / Visit Reason</label>
+                            <input type="text" id="diagnosis" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">Notes / Prescription</label>
+                            <textarea id="notes" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary"><i data-feather="save"></i> Save Record</button>
+                        <div id="history-message" class="message" style="display: none;"></div>
+                    </form>
+                </div>
+                
+                <div class="history-records">
+                    <h3><i data-feather="archive"></i> Past Records</h3>
+                    <div id="past-history-list" class="list-container">
+                        <p>No records found for this patient.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="global-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <div class="modal-icon"></div>
+            <h2 id="modal-title">Modal Title</h2>
+            <p id="modal-message">Modal message goes here.</p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
+                <button class="btn btn-primary" id="modal-confirm-btn">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 ClinicName. All rights reserved.</p>
+    </footer>
+    
+    <script src="js/main-v5.js"></script>
+</body>
+</html>

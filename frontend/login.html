@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kullolli Hospital</title>
+    <link rel="stylesheet" href="css/style-v5.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="form-page-body">
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Kullolli Hospital</a>
+            <nav>
+                <a href="index.html"><i data-feather="home"></i>Home</a>
+                <a href="doctors.html"><i data-feather="users"></i>Our Doctors</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="form-page-main">
+        <div class="form-container">
+            <h2>Login to Your Account</h2>
+            <p>Welcome back! Please enter your details.</p>
+            <form id="login-form">
+                
+                <div class="form-group">
+                    <label for="role">I am a:</label>
+                    <select id="role" required>
+                        <option value="patient" selected>Patient</option>
+                        <option value="doctor">Doctor</option>
+                        <option value="admin">Staff</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="email-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="patient@clinic.com">
+                </div>
+                
+                <div class="form-group" id="name-select-group" style="display: none;">
+                    <label for="name-select">Select Your Name</label>
+                    <select id="name-select" required>
+                        <option value="">-- Select your name --</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter your password">
+                </div>
+
+                <div id="form-message" class="message" style="display: none;"></div>
+                
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+                
+                <p class="auth-switch">Don't have an account? <a href="register.html">Register here</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Kullolli Hospital</h3>
+                <p>Your trusted multispeciality hospital in Sangli & Miraj, providing complete healthcare under one roof.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="doctors.html">Our Doctors</a></li>
+                    <li><a href="dashboard.html" id="footer-dashboard-link" style="display: none;">Dashboard</a></li>
+                    <li><a href="login.html" id="footer-login-link">Login / Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <p><i data-feather="map-pin"></i> Near Railway Over Bridge, Vishrambag, Sangli</p>
+                <p><i data-feather="phone"></i> +91 9960-52-3777</p>
+                <p><i data-feather="mail"></i> info@kullollihospital.com</p>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Kullolli Hospital. All rights reserved. (Project by Rohit Deshmukh)</p>
+        </div>
+    </footer>
+
+    <script src="js/main-v5.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
